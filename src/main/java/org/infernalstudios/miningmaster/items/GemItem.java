@@ -19,13 +19,18 @@ public class GemItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
         if (Screen.hasShiftDown()) {
-            tooltip.add(
-                Language.getInstance().has(this.getDescriptionId() + ".tooltip") ?
-                    Component.translatable(this.getDescriptionId() + ".tooltip") :
-                    Component.translatable("miningmaster.item.tooltip.fallback_gem")
-            );
+            String tooltipText = this.getTooltipText().getString();
+            for (String line : tooltipText.split("\n")) {
+                tooltip.add(Component.literal(line));
+            }
         } else {
             tooltip.add(Component.translatable("miningmaster.item.tooltip.hold_shift"));
         }
+    }
+
+    private Component getTooltipText() {
+        return Language.getInstance().has(this.getDescriptionId() + ".tooltip") ?
+            Component.translatable(this.getDescriptionId() + ".tooltip") :
+            Component.translatable("miningmaster.item.tooltip.fallback_gem");
     }
 }
