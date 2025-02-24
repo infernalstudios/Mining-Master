@@ -84,6 +84,9 @@
   "item.miningmaster.paragon_leggings": "Paragon Leggings",
   "item.miningmaster.paragon_boots": "Paragon Boots",
 
+  "miningmaster.item.tooltip.hold_shift": "\u00A78Hold [SHIFT] for more info",
+  "miningmaster.item.tooltip.fallback_gem": "\u00A7dCombine with an item in a smithing table to enchant!",
+
   "miningmaster:container.gem_forge": "Gem Forge",
 
   "miningmaster.advancements.miningmaster.root.title": "Mining Master",
@@ -203,7 +206,6 @@
 
   "miningmaster.config.option.randomGemsPerChunk": "Random Gem Spawns Per Chunk",
   "miningmaster.config.tooltip.randomGemsPerChunk": "Determines how many times a random gem ore will attempt to spawn per chunk. REQUIRES RESTART.",
-
 
   "enchantment.miningmaster.freezing": "Freezing",
   "enchantment.miningmaster.freezing.desc": "Inflicts Slowness on hit. Also deals extra damage to fire-based entities.",

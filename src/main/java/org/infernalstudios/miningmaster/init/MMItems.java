@@ -100,7 +100,7 @@ public class MMItems {
     public static final RegistryObject<CreativeModeTab> TAB = TABS.register("mining_master",
             () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(TAB_ITEM.get()))
-                    .title(Component.literal("Mining Master"))
+                    .title(Component.translatable("itemGroup.MiningMasterTab"))
                     .displayItems((features, output) -> {
                         for (RegistryObject<Item> item : ITEMS.getEntries()) {
                             if (item != TAB_ITEM) output.accept(item.get());
